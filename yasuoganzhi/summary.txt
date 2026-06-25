@@ -1,0 +1,12 @@
+压缩感知仿真实验：y = Ax + n
+A: 300 x 1000 Gaussian random measurement matrix
+x: 1000 x 1 random sparse signal, sparsity = 35
+n: Gaussian noise, sigma = 0.01
+
+Recovery model: min_x 0.5 ||Ax-y||_2^2 + lambda ||x||_1
+lambda = 0.03, rho = 1.0, iterations = 250
+
+ISTA final relative error: 0.323826
+ADMM final relative error: 0.025220
+ISTA measurement residual: 0.379940
+ADMM measurement residual: 0.240862
