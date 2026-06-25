@@ -1,0 +1,16 @@
+图像去噪实验：y = x + n
+实验方法：DCT域软阈值迭代去噪；ADMM-TV去噪
+
+image_size: 256 x 256
+noise_sigma: 0.08
+dct_lambda: 0.035
+tv_lambda: 0.055
+rho: 1.0
+dct_iterations: 80
+tv_iterations: 120
+noisy_psnr: 22.24679712193289
+dct_denoised_psnr: 25.18297283709999
+admm_tv_denoised_psnr: 32.73213545318921
+noisy_relative_error: 0.10196121237377392
+dct_relative_error: 0.07271536778468929
+admm_tv_relative_error: 0.030490747693788654
