@@ -20,7 +20,6 @@ y = x + n
 - `run_all.ps1`：一键运行全部流程
 - `summary.txt`：实验参数和最终指标
 
-说明：`run_all.ps1` 运行过程中会临时生成 raw 和 csv 中间文件，用于导出图片和曲线；运行结束后会自动清理这些中间文件，避免目录过于冗余。
 
 ## 输出图片
 
@@ -35,7 +34,7 @@ y = x + n
 ## 运行方法
 
 ```powershell
-cd "C:\Users\Administrator\Desktop\SCR-SAM\xiaomao"
+cd "C:\Users\Administrator\Desktop\experience\denoisy"
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\run_all.ps1
 ```
 
@@ -44,13 +43,13 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\run_all.ps1
 DCT 软阈值方法求解：
 
 ```text
-min_x 0.5 ||x-y||_2^2 + lambda ||DCT(x)||_1
+min_x ||x-y||_2^2 + lambda ||DCT(x)||_1
 ```
 
 ADMM-TV 方法求解：
 
 ```text
-min_x 0.5 ||x-y||_2^2 + lambda TV(x)
+min_x ||x-y||_2^2 + lambda TV(x)
 ```
 
 其中 `TV(x)` 为图像梯度的 L1 范数，能够在去噪的同时保持图像边缘。

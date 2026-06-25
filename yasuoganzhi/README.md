@@ -48,19 +48,19 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\generate_plots.ps1
 本实验求解的是带噪声情况下的 L1 正则化最小二乘模型：
 
 ```text
-min_x  0.5 ||Ax - y||_2^2 + lambda ||x||_1
+min_x ||Ax - y||_2^2 + lambda ||x||_1
 ```
 
 迭代阈值算法使用软阈值更新：
 
 ```text
-x(k+1) = S_{lambda t}(x(k) - t A^T(Ax(k)-y))
+x(k+1) = S_{λ}(x(k) - t A^T(Ax(k)-y))
 ```
 
 ADMM 将问题拆分为：
 
 ```text
-min 0.5 ||Ax-y||_2^2 + lambda ||z||_1
+min ||Ax-y||_2^2 + λ ||z||_1
 s.t. x = z
 ```
 
